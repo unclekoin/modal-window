@@ -1,16 +1,93 @@
 body {
     margin: 0;
     font-family: sans-serif;
-    color: #666666;
+    color: #636e72;
 }
 
 .container {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 30px 0;
+    padding: 2rem 1rem;
 }
 
 .container h1 {
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
     text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.cards {
+    display: grid;
+    grid-gap: 1rem;
+    margin: 0 auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 1.5rem 1.5rem;
+    border: 2px solid #ffeaa7;
+    border-radius: 5px;
+    text-align: center;
+    transition: box-shadow, background-color, border-color 0.3s linear;
+}
+
+.card:hover {
+    box-shadow: 2px 2px 7px rgba(99, 110, 114, 0.5);
+    border-color: #fdcb6e;
+}
+
+.card__title {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.card__image {
+    display: inline-block;
+    width: 100%;
+}
+
+.card__btn-block {
+    display: flex;
+}
+
+.card__btn {
+    align-self: center;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #e84393;
+    border: 1px solid #e84393;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s linear;
+}
+
+.card__btn.green {
+    background-color: #00b894;
+    border-color: #00b894;
+}
+
+.card__btn:first-child {
+    margin-right: 0.5rem;
+}
+
+.card__btn:hover {
+    color: #e84393;
+    background-color: #ffffff;
+}
+
+.card__btn.green:hover {
+    color: #00b894;
+}
+
+@media (min-width: 640px) {
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }

@@ -48,7 +48,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    color: #2d3436;
+    color: #636e72;
     border-radius: 5px;
     background-color: #fff;
     transform: translateY(-200px);
@@ -72,7 +72,7 @@
 }
 
 .modal__body {
-    padding: 10px 15px;
+    padding: 5px 15px;
     flex-grow: 1;
 }
 
@@ -91,11 +91,21 @@
     text-transform: uppercase;
     font-weight: 700;
     color: #ffffff;
-    background-color: #00b894;
-    border: 1px solid #00b894;
+    background-color: #636e72;
+    border: 1px solid #636e72;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color, color 0.3s linear;
+}
+
+.modal__btn.red {
+    background-color: #e84393;
+    border-color: #e84393;
+}
+
+.modal__btn.green {
+    background-color: #00b894;
+    border-color: #00b894;
 }
 
 .modal__btn:not(:last-child) {
@@ -107,6 +117,16 @@
 }
 
 .modal__btn:hover {
+    color: #636e72;
+    background-color: #ffffff;
+}
+
+.modal__btn.red:hover {
+    color: #e84393;
+    background-color: #ffffff;
+}
+
+.modal__btn.green:hover {
     color: #00b894;
     background-color: #ffffff;
 }
