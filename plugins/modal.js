@@ -67,6 +67,9 @@ $.modal = function (options) {
       const closeTimeout = setTimeout(() => {
         $modal.classList.remove('hidden');
         closing = false;
+        if (typeof options.onClose === 'function') {
+          options.onClose();
+        }
       }, ANIMATION_SPEED)
     }
   }

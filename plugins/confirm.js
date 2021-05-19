@@ -5,6 +5,9 @@ $.confirm = function (options) {
       content: options.content,
       closable: false,
       width: '400px',
+      onClose() {
+        modal.destroy();
+      },
       footerButtons: [
         {
           text: 'No',
@@ -24,6 +27,6 @@ $.confirm = function (options) {
         }
       ]
     })
-    modal.open();
+    setTimeout(() => modal.open(), 100)
   })
 }

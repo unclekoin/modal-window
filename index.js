@@ -1,33 +1,33 @@
-const fruits = [
+let fruits = [
   {
     id: 1, title: 'Apple',
     price: 20,
-    img: 'https://supermarket.nop-templates.com/images/thumbs/0000228_red-apples.png'
+    img: 'images/apple.png'
   },
   {
     id: 2, title: 'Orange',
     price: 30,
-    img: 'https://images.ctfassets.net/96ftuyamizgy/3RYl3Whe7jnllT00HAWvYw/d31f58db5e625ecc64777ca8b9b2bd27/ingredient-vitamin-c.jpg.png'
+    img: 'images/orange.png'
   },
   {
     id: 3, title: 'Mango',
     price: 50,
-    img: 'https://svit24.net/wp-content/uploads/2014/10/mango.png'
+    img: 'images/mango.png'
   },
   {
     id: 4, title: 'Strawberry',
     price: 200,
-    img: 'https://www.dampfmatiker.de/wp-content/uploads/2020/02/Inawera-Shisha-Strawberry.png'
+    img: 'images/strawberry.png'
   },
   {
     id: 5, title: 'Lemon',
     price: 35,
-    img: 'https://tgroenselof.be/wp-content/uploads/2018/09/t_Groenselof-Lokeren-groentebox-citroenen.png'
+    img: 'images/lemon.png'
   },
   {
     id: 6, title: 'Merry',
     price: 150,
-    img: 'https://yesfrukt.com/storage/source/417445f38227c75fe787cd12edce54c8/product/1/QCoSz_J-cWHVjtsKn8M2EgMfWWlRV-WL.png'
+    img: 'images/merry.png'
   },
 ];
 
@@ -83,7 +83,8 @@ document.addEventListener('click', (event) => {
       title: 'Are you sure?',
       content: `<p>You are deleting the card <strong>"${fruit.title}"</strong></p>`
     }).then(() => {
-      console.log('Delete')
+      fruits = fruits.filter((fruit) => fruit.id !== id);
+      render();
     }).catch(() => {
       console.log('Cancel')
     })
